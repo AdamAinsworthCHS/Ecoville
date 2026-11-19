@@ -2,14 +2,21 @@ using UnityEngine;
 
 public class Building : MonoBehaviour
 {
+    [Header("Building Placement")]
     public bool placed;
     public bool canBePlaced;
-    Vector2 trueMousePos;
+    private Vector2 trueMousePos;
+    private GameController gameController;
+
+    [Header("Building Stats")]
+    public int cost;
+    public int enviroscore;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         placed = false;
         canBePlaced = true;
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
     }
 
     // Update is called once per frame
@@ -34,6 +41,8 @@ public class Building : MonoBehaviour
                 {
                     placed = true;
                     this.GetComponent<SpriteRenderer>().color = Color.white;
+                    gameController.placingBuilding = false;
+                    gameController.enviroscoreGain += enviroscore;
                 }
             }
         }
