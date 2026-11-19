@@ -110,7 +110,7 @@ MonoBehaviour:
   placed: 0
   canBePlaced: 0
   cost: 200000
-  enviroscore: 1
+  enviroscore: 1.5
 --- !u!50 &7733391791828650207
 Rigidbody2D:
   serializedVersion: 5

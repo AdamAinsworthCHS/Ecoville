@@ -10,7 +10,7 @@ public class Building : MonoBehaviour
 
     [Header("Building Stats")]
     public int cost;
-    public int enviroscore;
+    public float enviroscore;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -53,7 +53,6 @@ public class Building : MonoBehaviour
         if (collision.CompareTag("Building"))
         {
             canBePlaced = false;
-            Debug.Log("entered trigger");
         }
     }
 

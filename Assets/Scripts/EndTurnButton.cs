@@ -24,6 +24,7 @@ public class EndTurnButton : MonoBehaviour
         //when pressed end the turn
         gameController.actions = gameController.maxActions;
         gameController.enviroscore += gameController.enviroscoreGain;
+        gameController.money += gameController.revenue;
         gameController.monthCount +=1;
     }
 

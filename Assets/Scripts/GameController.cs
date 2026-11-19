@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     public int monthCount;
     public float enviroscoreGain;
     public float enviroscore;
+    public int revenue;
 
     [Header("Game Handling Variables")]
     public bool placingBuilding;
